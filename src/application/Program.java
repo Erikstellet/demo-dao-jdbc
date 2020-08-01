@@ -45,17 +45,4 @@ public class Program
 		System.out.println("Inserted! New id: " + newSeller.getId());
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
