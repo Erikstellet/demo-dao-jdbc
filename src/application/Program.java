@@ -48,7 +48,7 @@ public class Program
 		System.out.println("Inserted! New id: " + newSeller.getId());
 	
 
-		System.out.println("\n =================================== Test 5 - Seller Update  =================================== \n");
+		System.out.println("\n=================================== Test 5 - Seller Update  =================================== \n");
 		
 		seller = sellerDao.findById(1);
 		seller.setName("Martha Waine");
@@ -57,7 +57,7 @@ public class Program
 		
 		System.out.println("Update: " + seller);
 	
-		System.out.println("\n =================================== Test 6 - Seller Delete  =================================== \n");
+		System.out.println("\n=================================== Test 6 - Seller Delete  =================================== \n");
 	
 		System.out.println("Enter ID for delete test: ");
 		int id = sc.nextInt();
