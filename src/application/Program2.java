@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -38,13 +39,28 @@ public class Program2
 		
 		System.out.println("\n=================================== Test 4 - Department Insert  =================================== \n");
 		
+		Department objIns = new Department(null, "Music");
+		depDao.insert(objIns);
+		
+		System.out.println(objIns);
 	
 		System.out.println("\n=================================== Test 5 - Department Update  =================================== \n");
 		
-	
+		dep = depDao.findById(3);
+		dep.setName("Kitchen");
+		depDao.update(dep);
+		
+		System.out.println("Update: " + dep);
+		
 		System.out.println("\n=================================== Test 6 - Department Delete  =================================== \n");
+		
+		System.out.println("Enter ID for delete test: ");
+		int id = sc.nextInt();
+		
+		depDao.deleteById(id);
 	
-	
+		System.out.println("Delete Completed!");
+		
 		sc.close();
 	}
 }
